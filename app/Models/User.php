@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use HasFactory, MustVerifyEmailTrait, HasRoles;
+    use HasFactory, MustVerifyEmailTrait, HasRoles, Traits\ActiveUserHelper;
 
     use Notifiable {
         notify as protected laravelNotify;
